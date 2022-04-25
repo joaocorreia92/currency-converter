@@ -3,8 +3,8 @@ Simple React App to convert currencies to their daily values.
 
 ### Technologys
 
-React
+## React
 
-##### API
+### API
 
 https://free.currencyconverterapi.com/

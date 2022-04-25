@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Converter.css'
 
 export default function Converter(props) {
   const [coinA, setCoinA] = useState("");
@@ -7,15 +8,9 @@ export default function Converter(props) {
   const convert = async () => {
     let from_to = `${props.coinA}_${props.coinB}`
     let url = `https://free.currconv.com/api/v7/convert?q=${from_to}&compact=y`
+    let header = ("Access-Control-Allow-Origin: http://localhost:3000/")
 
-    var myHeaders = new Headers();
-
-    var myInit = { method: 'GET',
-               headers: myHeaders,
-               mode: 'cors',
-               cache: 'default' };
-
-    fetch(url, myInit).then(res => {
+    fetch(url, header).then(res => {
       return res.json()
     }).then(json => {
       let price = json[from_to].val
