@@ -1,2 +1,2 @@
 # currency-converte
-Simple page to convert currencies to their daily values.
+Simple React App to convert currencies to their daily values.
